@@ -1,4 +1,5 @@
-/* eslint-disable class-methods-use-this no-console */
+/* eslint-disable class-methods-use-this */
+/* eslint-disable no-console */
 class Broadcasting {
   constructor(url) {
     this.url = url;
@@ -7,7 +8,7 @@ class Broadcasting {
   DOMInit() {
     const broadcastMessages = document.createElement('div');
     broadcastMessages.id = 'broadcast-messages';
-    broadcastMessages.innerHTML = `<ul class="messages-list"></ul>`;
+    broadcastMessages.innerHTML = '<ul class="messages-list"></ul>';
     document.body.appendChild(broadcastMessages);
   }
 
