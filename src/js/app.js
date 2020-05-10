@@ -19,14 +19,17 @@ class Broadcasting {
   }
 
   addMessage(shownMessage) {
-    const { msg, date, id } = JSON.parse(shownMessage);
+    const { field, msg, date, id } = JSON.parse(shownMessage);
     this.broadcastMessage = document.createElement('li');
     this.broadcastMessage.className = 'broadcast-message';
     this.broadcastMessage.dataset.id = id;
     this.broadcastMessage.innerHTML = `
     <div class="text-message">
-    <span class="date">${this.printData(date)}</span>
-    <p class="text">${msg}</p>
+      <span class="date">${this.printData(date)}</span>
+      <div class="image-text">
+        <span class="${field} image"></span>
+        <p class="text">${msg}</p>
+      </div>
     </div>
     `;
     this.messagesList.appendChild(this.broadcastMessage);
