@@ -19,7 +19,9 @@ class Broadcasting {
   }
 
   addMessage(shownMessage) {
-    const { field, msg, date, id } = JSON.parse(shownMessage);
+    const {
+      field, msg, date, id,
+    } = JSON.parse(shownMessage);
     this.broadcastMessage = document.createElement('li');
     this.broadcastMessage.className = 'broadcast-message';
     this.broadcastMessage.dataset.id = id;
