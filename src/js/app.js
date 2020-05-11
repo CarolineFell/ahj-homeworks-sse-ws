@@ -42,12 +42,12 @@ class Broadcasting {
 
     eventSource.addEventListener('open', (event) => {
       console.log(event);
-      console.log('connected');
+      console.log('connected to server');
     });
 
     eventSource.addEventListener('error', (event) => {
       console.log(event);
-      console.log('error');
+      console.log('error on server');
     });
 
     eventSource.addEventListener('comment', (event) => {
